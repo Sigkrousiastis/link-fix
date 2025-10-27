@@ -1,20 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <script>
-    function openDiscord() {
-      // Try opening the Discord app
-      window.location = "discord://discord.gg/KyMHJFFb8G";
-
-      // Fallback to web after 1 second if app fails to open
-      setTimeout(function() {
-        window.location = "https://discord.gg/KyMHJFFb8G";
-      }, 1000);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open in Browser</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      background-color: #f9f9f9;
     }
-    window.onload = openDiscord;
-  </script>
+    h1 {
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      color: #fff;
+      background-color: #ff0050;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #e60044;
+    }
+  </style>
 </head>
 <body>
-  <p>If the Discord app doesn't open, <a href="https://discord.gg/KyMHJFFb8G">click here</a>.</p>
+  <h1>Open this link in your browser</h1>
+  <p>For the best experience, please open this link outside TikTok.</p>
+  <button onclick="openExternal()">Open in Browser</button>
+
+  <script>
+    function openExternal() {
+      // Replace this with your final link
+      const finalURL = "https://discord.gg/KyMHJFFb8G";
+      window.location.href = finalURL;
+    }
+  </script>
 </body>
 </html>
